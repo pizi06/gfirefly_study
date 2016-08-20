@@ -1,0 +1,21 @@
+[2013-09-12 10:28:04.224000]
+ERROR
+	Log observer <bound method FileLogObserver.emit of <twisted.python.log.FileLogObserver instance at 0x000000000317B788>> failed.
+Traceback (most recent call last):
+  File "appmain.py", line 28, in <module>
+    ser.start()
+  File "D:\Program Files (x86)\Python26\lib\site-packages\firefly-1.2.3dev-py2.6.egg\firefly\server\server.py", line 109, in start
+    reactor.run()
+  File "D:\Program Files (x86)\Python26\lib\site-packages\twisted\internet\base.py", line 1169, in run
+    self.mainLoop()
+  File "D:\Program Files (x86)\Python26\lib\site-packages\twisted\internet\base.py", line 1186, in mainLoop
+    log.msg('Main loop terminated.')
+--- <exception caught here> ---
+  File "D:\Program Files (x86)\Python26\lib\site-packages\twisted\python\log.py", line 284, in msg
+    self.observers[i](actualEventDict)
+  File "D:\Program Files (x86)\Python26\lib\site-packages\twisted\python\log.py", line 481, in emit
+    util.untilConcludes(self.flush)  # Hoorj!
+  File "D:\Program Files (x86)\Python26\lib\site-packages\twisted\python\util.py", line 784, in untilConcludes
+    return f(*a, **kw)
+exceptions.IOError: [Errno 22] Invalid argument
+
